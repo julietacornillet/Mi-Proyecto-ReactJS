@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col, FormGroup } from 'react-bootstrap';
 import Swal from "sweetalert2";
 
 function Contacto() {
@@ -58,23 +58,29 @@ function Contacto() {
 
     // formulario
     return (
-        <Container>
-        <h2>Contacto</h2>
+        <Container className='py-5'>
+        <h2 className="text-primary-emphasis mb-3">Formulario de consultas</h2>
         <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-                <Form.Label>Nombre</Form.Label>
-                <Form.Control type="text" placeholder="Tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="tu@email.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Form.Group as={Row} controlId="formGridState">
+                <Col sm={6}>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Nombre</Form.Label>
+                        <Form.Control type="text" placeholder="Tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    </Form.Group>
+                </Col>
+                <Col sm={6}>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder="tu@email.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </Form.Group>
+                </Col>
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Mensaje</Form.Label>
                 <Form.Control as="textarea" rows={3} value={mensaje} onChange={(e) => setMensaje(e.target.value)} />
             </Form.Group>
 
-            <Button variant="primary" type="submit">Enviar</Button>
+            <Button variant="primary" type="submit">Enviar consulta</Button>
         </Form>
         </Container>
     );

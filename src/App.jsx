@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -19,9 +22,6 @@ function App() {
   //   setCarrito([...carrito,modulosList])
   // };
 
-  // datos header
-  const usuario = "Julieta Cornillet";
-  const tipo = "Administrador";
 
   // menú principal
   const navItems = ["Inicio", "Módulos", "Contacto"];
@@ -46,12 +46,13 @@ function App() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      <Header tipo={tipo} usuario={usuario} />
-      <Nav items={navItems} onSeleccion={setSeccion} contador={contador} modulosList={modulosList}/>
-      <main className="flex-grow-1 p-3">
+      <Header />
+      <Nav items={navItems} onSeleccion={setSeccion} setContador={setContador} contador={contador} modulosList={modulosList}/>
+      <main className="flex-grow-1">
         {renderContenido()}
       </main>
       <Footer />
+
     </div>
   );
 }
