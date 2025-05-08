@@ -37,7 +37,7 @@ function Modulos({contador, setContador, modulosList, addToCart}) {
                                     <CardLink href={modulo.btnAdicional} title={`Ver material del módulo N°` + (idx + 1)} aria-label={'Ver material del módulo' + modulo.titulo} className="btn btn-sm btn-outline-primary" target="blank"> Material teórico <FontAwesomeIcon className="ms-1" icon={faLink} size="sm" /></CardLink> : ''}
 
                                     {modulo.btnTexto ? 
-                                    <Button onClick={()=>setContador(contador+1)} variant="primary rounded-circle" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button> : <Button variant="primary rounded-5" size="sm" disabled>Próximamente</Button>}
+                                    <Button onClick={()=>setContador(contador+1)} variant="primary rounded-circle" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button> : <Button variant="primary" size="sm" disabled>Próximamente</Button>}
                                         
                                     
                                     {/* <ButtonGroup aria-label="Agregar al carrito">
