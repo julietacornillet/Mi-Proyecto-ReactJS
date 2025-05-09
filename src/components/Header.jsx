@@ -5,6 +5,8 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import { Link } from 'react-router-dom';
 
+
+
 function Header() {
   return (
     <Navbar bg="primary" variant="dark" className="px-3">

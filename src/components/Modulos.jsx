@@ -7,7 +7,7 @@ import { Stack } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faLink } from '@fortawesome/free-solid-svg-icons';
 
-function Modulos({contador, setContador, modulosList, addToCart}) {
+function Modulos({contador, setContador, modulosList}) {
     // console.log(modulosList);
     
     return(

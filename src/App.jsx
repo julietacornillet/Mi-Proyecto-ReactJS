@@ -26,7 +26,7 @@ function App() {
     <div className="d-flex flex-column min-vh-100">
       <BrowserRouter>
         <Header/>
-        <Nav setContador={setContador} contador={contador} modulosList={modulosList}/>
+        <Nav setContador={setContador} contador={contador}/>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
