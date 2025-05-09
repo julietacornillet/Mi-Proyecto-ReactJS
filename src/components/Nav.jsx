@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Nav({onSeleccion, contador, setContador}) {
+function Nav({contador, setContador}) {
   // console.log(modulosList);
   
   // offCanvas navbar
@@ -32,12 +32,7 @@ function Nav({onSeleccion, contador, setContador}) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <MenuNav className="ms-auto">
-
-            {/* {items.map((item) => (
-              <MenuNav.Link as={Link} to='/' key={item} onClick={() => onSeleccion(item)}>
-                {item}
-              </MenuNav.Link>
-            ))} */}
+            
             <MenuNav.Link as={Link} to='/'>Inicio</MenuNav.Link>
             <MenuNav.Link as={Link} to='/modulos'>Módulos</MenuNav.Link>
 

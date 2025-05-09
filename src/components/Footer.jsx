@@ -16,12 +16,12 @@ function Footer() {
               <ul className='list-unstyled'>
                   <li className='fw-bold'>Alumna</li>
                   <li>Julieta Cornillet</li>
-                  <li>julietacornillet@gmail.com</li>
+                  <li><a href='mailto:julietacornillet@gmail.com' className='text-decoration-none link-light'>julietacornillet@gmail.com</a></li>
               </ul>
           </Col>
       </Row>
         <Col className='text-center'>
-          <p className="mb-0 text-light-emphasis small">© 2025 - Proyecto Julieta Cornillet para el Curso React JS en Talento Tech</p>
+          <p className="mb-0 text-light-emphasis small">© 2025 - Proyecto personal - Curso React JS Talento Tech</p>
         </Col>
       </Container>
     </footer>
