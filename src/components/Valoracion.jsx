@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Row, Col, Card, Badge, Image } from 'react-bootstrap';
+import { Row, Col, Card, Image } from 'react-bootstrap';
 
 
 function Valoracion() {
@@ -24,7 +24,6 @@ function Valoracion() {
             <Row>
             {comments.map((comment, index) => {
                 const avatar = `https://picsum.photos/50/?random=${index + 1}`;
-                // const rating = Math.floor(Math.random() * 5) + 1;
 
                 return (
                 <Col key={comment.id} md={4} className="g-3">

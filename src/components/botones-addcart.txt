@@ -1,0 +1,38 @@
+/* en app.jsx */
+  // const [carrito, setCarrito] = useState([]);
+  // const handleAddToCarrito =(modulosList)=>{
+  //   setCarrito([...carrito,modulosList])
+  // };
+
+/* para el menú con props */
+  // switch contenido principal pages
+  //const [seccion, setSeccion] = useState("Inicio");
+
+  // const renderContenido = () => 
+  //   {
+  //   switch (seccion) {
+  //     case "Inicio":
+  //       return <Home />;
+  //     case "Módulos":
+  //       return <Modulos setContador={setContador} contador={contador} modulosList={modulosList}/>;
+  //     case "Contacto":
+  //       return <Contacto />;
+  //     default:
+  //       return <Home />;
+  //   }
+  // };
+   {/* <Nav items={navItems} onSeleccion={setSeccion} setContador={setContador} contador={contador} modulosList={modulosList}/>
+      <main className="flex-grow-1">
+        {renderContenido()}
+      </main> */}
+
+
+
+
+/* en módulos.jsx */
+
+{/* <ButtonGroup aria-label="Agregar al carrito">
+    <Button onClick={()=>addToCart(modulo.titulo)} variant="outline-primary" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
+    <Button onClick={()=>setContador(contador+1)} size="sm" variant="outline-success shadow" title="Sumar" aria-label="Sumar al carrito"><span className="h5 px-1 fw-bolder">+</span></Button>
+    <Button onClick={()=>setContador(contador-1)} size="sm" variant="outline-danger shadow" title="Quitar" aria-label="Quitar al carrito"><span className="h5 px-1 fw-bolder">-</span></Button>
+</ButtonGroup> */}

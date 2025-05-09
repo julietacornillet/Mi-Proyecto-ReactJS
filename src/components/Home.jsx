@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Stack } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Valoracion from './Valoracion';
 
 function Home() {

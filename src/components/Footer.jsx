@@ -22,7 +22,7 @@ function Footer() {
           </Col>
       </Row>
         <Col className='text-center'>
-          <p className="mb-0 text-light-emphasis">© 2025 Curso React JS en Talento Tech.</p>
+          <p className="mb-0 text-light-emphasis small">© 2025 - Proyecto Julieta Cornillet para el Curso React JS en Talento Tech</p>
         </Col>
       </Container>
     </footer>

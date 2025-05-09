@@ -42,8 +42,24 @@ export const modulosList= [
     {
         id:6,
         titulo:'Router - Rutas Estáticas y Dinámicas',
-        texto:'Introducción al manejo de efectos secundarios con useEffect / Realización de peticiones a APIs para cargar productos / Manejo del estado de carga y errores en aplicaciones React.',
+        texto:'Instalación y configuración de React Router / Creación de rutas estáticas (inicio, lista de productos) / Uso de Link para navegar entre componentes',
         imagen:"https://picsum.photos/250/120?random=6",
+        btnTexto: 'Lo quiero!',
+        btnAdicional:'https://ttech2025.github.io/flipbook/REACTJS/Clase06/'
+    },
+    {
+        id:7,
+        titulo:'Router - Rutas Estáticas y Dinámicas',
+        texto:'Creación de rutas dinámicas (detalle de productos) / Implementación de rutas protegidas (carrito, administración de productos) / Redirección de usuarios no autenticados',
+        imagen:"https://picsum.photos/250/120?random=7",
+        btnTexto: '',
+        // btnAdicional:'https://ttech2025.github.io/flipbook/REACTJS/Clase07/'
+    },
+    {
+        id:8,
+        titulo:'Introducción a Context API',
+        texto:'Creación de Context API para el manejo de estado global / Uso de useContext para compartir datos entre componentes / Implementación del estado global para el carrito de compras',
+        imagen:"https://picsum.photos/250/120?random=8",
         btnTexto: '',
         btnAdicional:''
     }

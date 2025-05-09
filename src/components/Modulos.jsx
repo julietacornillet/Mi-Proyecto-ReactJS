@@ -32,20 +32,11 @@ function Modulos({contador, setContador, modulosList, addToCart}) {
                             </Card.Body>
                             <CardFooter className="border-top-0 bg-white pb-3">
                                 <ButtonToolbar className="justify-content-between" aria-label="Grupo de botones Agregar al carrito y descargar material" >
-
                                     {modulo.btnAdicional ? 
-                                    <CardLink href={modulo.btnAdicional} title={`Ver material del módulo N°` + (idx + 1)} aria-label={'Ver material del módulo' + modulo.titulo} className="btn btn-sm btn-outline-primary" target="blank"> Material teórico <FontAwesomeIcon className="ms-1" icon={faLink} size="sm" /></CardLink> : ''}
+                                    <CardLink href={modulo.btnAdicional} title={`Ver material del módulo N°` + (idx + 1)} aria-label={'Ver material del módulo' + modulo.titulo} className="btn btn-sm btn-primary" target="blank"> Material teórico <FontAwesomeIcon className="ms-1" icon={faLink} size="sm" /></CardLink> : <Button variant="outline-primary" size="sm" disabled>Próximamente</Button>}
 
                                     {modulo.btnTexto ? 
-                                    <Button onClick={()=>setContador(contador+1)} variant="primary rounded-circle" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button> : <Button variant="primary" size="sm" disabled>Próximamente</Button>}
-                                        
-                                    
-                                    {/* <ButtonGroup aria-label="Agregar al carrito">
-                                        <Button onClick={()=>addToCart(modulo.titulo)} variant="outline-primary" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
-                                        <Button onClick={()=>setContador(contador+1)} size="sm" variant="outline-success shadow" title="Sumar" aria-label="Sumar al carrito"><span className="h5 px-1 fw-bolder">+</span></Button>
-                                        <Button onClick={()=>setContador(contador-1)} size="sm" variant="outline-danger shadow" title="Quitar" aria-label="Quitar al carrito"><span className="h5 px-1 fw-bolder">-</span></Button>
-                                    </ButtonGroup> */}
-
+                                    <Button onClick={()=>setContador(contador+1)} variant="outline-success rounded-circle" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button> : ''}
                                 </ButtonToolbar>                                
                             </CardFooter>
                         </Card>
