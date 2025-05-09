@@ -1,8 +1,23 @@
-/* en app.jsx */
+/* agregar para el carrito detalle en app.jsx */
+
   // const [carrito, setCarrito] = useState([]);
   // const handleAddToCarrito =(modulosList)=>{
   //   setCarrito([...carrito,modulosList])
   // };
+  
+
+/* agregar 'addToCart' en módulos.jsx */
+
+{/* <ButtonGroup aria-label="Agregar al carrito">
+    <Button onClick={()=>addToCart(modulo.titulo)} variant="outline-primary" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
+    <Button onClick={()=>setContador(contador+1)} size="sm" variant="outline-success shadow" title="Sumar" aria-label="Sumar al carrito"><span className="h5 px-1 fw-bolder">+</span></Button>
+    <Button onClick={()=>setContador(contador-1)} size="sm" variant="outline-danger shadow" title="Quitar" aria-label="Quitar al carrito"><span className="h5 px-1 fw-bolder">-</span></Button>
+</ButtonGroup> */}
+
+__________________________________________________________________________
+
+lo que modifiqué para las routes, saco el switch y agrego BrowserRouter
+
 
 /* para el menú con props */
   // switch contenido principal pages
@@ -28,11 +43,3 @@
 
 
 
-
-/* en módulos.jsx */
-
-{/* <ButtonGroup aria-label="Agregar al carrito">
-    <Button onClick={()=>addToCart(modulo.titulo)} variant="outline-primary" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
-    <Button onClick={()=>setContador(contador+1)} size="sm" variant="outline-success shadow" title="Sumar" aria-label="Sumar al carrito"><span className="h5 px-1 fw-bolder">+</span></Button>
-    <Button onClick={()=>setContador(contador-1)} size="sm" variant="outline-danger shadow" title="Quitar" aria-label="Quitar al carrito"><span className="h5 px-1 fw-bolder">-</span></Button>
-</ButtonGroup> */}

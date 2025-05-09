@@ -1,10 +1,8 @@
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
+import {Container, Row, Col} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import {Card, ButtonToolbar, CardFooter} from 'react-bootstrap';
+import {Card, CardFooter, CardLink, ButtonToolbar} from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
-import { Stack, CardLink } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faLink } from '@fortawesome/free-solid-svg-icons';
