@@ -3,17 +3,18 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Modulos from './components/Modulos';
-import Contacto from './components/Contacto';
+import Home from './pages/Home';
+import Modulos from './pages/Modulos';
+import Contacto from './pages/Contacto';
 import Login from './components/Login';
 import ComingSoon from './components/ComingSoon';
 
 
 // listado para modulos
 import { modulosList } from './utils/modulosList';
-
+// css
 import 'bootstrap/dist/css/bootstrap.min.css';
+// rutas
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -30,7 +31,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList}/>}/>
+            <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList} producto={'Módulo 0'} infoLink={'Material teórico'}/>}/>
             <Route path='/contacto' element={<Contacto/>}/>
             
             <Route path='/comingSoon' element={<ComingSoon/>}/>
