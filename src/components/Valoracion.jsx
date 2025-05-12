@@ -12,14 +12,10 @@ function Valoracion() {
         .catch(err => console.error("Error de carga de comentarios", err));
     }, []);
 
-    // Función para mostrar estrellas
-    // const getStars = (rating) => {
-    // return Array.from({ length: 5 }, (_, i) => i < rating ? '★' : '☆').join(' ');
-    // };
 
     return (
     <div className='row bg-gradient bg-light p-3 px-md-5 pb-5 mt-auto container-fluid d-flex justify-content-center'>
-        <div className='col-md-8'>
+        <div className='col-md-8 pt-1'>
             <h2 className='h5 text-black-50 mb-3'>Comentarios</h2>
             <Row>
             {comments.map((comment, index) => {
@@ -40,7 +36,6 @@ function Valoracion() {
                             </Row>
                         </Card.Title> 
                         <Card.Text className='small'>
-                            {/* <Badge className='text-dark my-2 bg-warning'>{getStars(rating)}</Badge> */}
                             {comment.body}
                             <br/>
                             <span className='small mt-2 fw-medium'>Publicado por: {comment.email}</span>

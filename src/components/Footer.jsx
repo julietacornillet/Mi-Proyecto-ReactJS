@@ -2,7 +2,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 
 function Footer() {
   return (
-    <footer className="bg-dark bg-gradient text-white py-3 mt-auto">
+    <footer className="bg-dark bg-gradient text-white py-4 mt-auto">
       <Container>
       <Row>
           <Col className='me-auto' md="auto">

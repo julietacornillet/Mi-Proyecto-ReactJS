@@ -1,3 +1,50 @@
+canal youtube
+https://www.youtube.com/watch?v=VPYJQw_pPZs&list=PLPhAjoBgoPidSKXDsJO27RKDXoYDH2fC0
+
+/* inicio */
+
+version del node / si no instalar 
+
+1.- en consola cmd --> npm create vite@latest
+2.- project name: nombre-del-proyecto
+3.- select a framework: del listado --> React
+4.- select a variant: del listado --> JavaScript
+5.- desde la misma consola o en la terminal del visual (cmd NO powershell) abro el proyecto
+6.- bajo la carpeta con el nombre de mi proyecto c:\mio\curso-react\nombre-del-proyecto> : instalo las dependencias --> npm install
+7.- corro el poryecto: --> npm run dev
+
+/* routes */
+1.- npm install react-router-dom
+en al app.jsc 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
+/* bootstrap */
+
+1.- npm install react-bootstrap bootstrap
+
+2.- en app.jsp --> import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+/* fontawesome ==> https://docs.fontawesome.com/v5/web/use-with/react */ 
+
+1.-  npm install @fortawesome/react-fontawesome@latest
+
+    //npm install @fortawesome/react-fontawesome
+
+    npm install @fortawesome/fontawesome-svg-core
+    npm install @fortawesome/free-solid-svg-icons
+    npm install @fortawesome/free-regular-svg-icons
+    npm install @fortawesome/free-brands-svg-icons
+
+2.- en el archivp que vaya a usar los iconos hay que agregar
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'; --> cada ícono que utilice, declarar si es brands o regular o solid
+
+__________________________________________________________________________
+__________________________________________________________________________
+
 /* agregar para el carrito detalle en app.jsx */
 
   // const [carrito, setCarrito] = useState([]);

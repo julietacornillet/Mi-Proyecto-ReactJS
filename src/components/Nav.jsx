@@ -22,7 +22,7 @@ function Nav({contador, setContador}) {
     <Navbar collapseOnSelect expand="lg" bg="light" data-bs-theme="light" className="shadow sticky-top">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Brand as={Link} to="/" className='fw-bolder'>Proyecto React JS</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" className='fw-bolder text-primary'>Proyecto React JS</Navbar.Brand>
 
         {/* botón carrito small */}
         <div className='d-lg-none d-md-none'>

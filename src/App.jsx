@@ -11,7 +11,7 @@ import ComingSoon from './components/ComingSoon';
 
 
 // listado para modulos
-import { modulosList } from './utils/moduloslist';
+import { modulosList } from './utils/modulosList';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
