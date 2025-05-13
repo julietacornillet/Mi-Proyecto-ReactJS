@@ -22,7 +22,7 @@ function Nav({contador, setContador}) {
     <Navbar collapseOnSelect expand="lg" bg="light" data-bs-theme="light" className="shadow sticky-top">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Brand as={Link} to="/" className='fw-bolder text-primary'>Proyecto React JS</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" className='fw-bolder text-primary'>ReactShop Juli</Navbar.Brand>
 
         {/* botón carrito small */}
         <div className='d-lg-none d-md-none'>
@@ -34,6 +34,7 @@ function Nav({contador, setContador}) {
             
             <MenuNav.Link as={Link} to='/'>Inicio</MenuNav.Link>
             <MenuNav.Link as={Link} to='/modulos'>Módulos</MenuNav.Link>
+            <MenuNav.Link as={Link} to='/libros'>Libros</MenuNav.Link>
 
             <NavDropdown title="Documentación" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="https://aulasvirtuales.bue.edu.ar/login/index.php" target='_blank'>Plataforma virtual</NavDropdown.Item>

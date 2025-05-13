@@ -56,7 +56,7 @@ function Login () {
 
     return(
         <Container className="m-auto">
-            <Row className="d-flex justify-content-center">
+            <Row className="d-flex justify-content-center m-4">
                 <Col md={4}>
                     <Card className="shadow p-3">
                         <CardBody>

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Modulos from './pages/Modulos';
 import Contacto from './pages/Contacto';
 import Login from './components/Login';
+import Books from './components/Books';
 import ComingSoon from './components/ComingSoon';
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList} producto={'Módulo 0'} infoLink={'Material teórico'}/>}/>
+            <Route path='/libros' element={<Books contador={contador} setContador={setContador} />}/>
             <Route path='/contacto' element={<Contacto/>}/>
             
             <Route path='/comingSoon' element={<ComingSoon/>}/>

@@ -5,7 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 import { Stack } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faHeart, faLink } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -15,6 +15,9 @@ function CardProduct ({producto, infoLink, contador, setContador, modulosList}) 
         {modulosList.map((modulo, idx) => (
             <Col md={6} key={idx} lg="4" className="mb-4">
                 <Card className="shadow h-100">
+                    <span className="position-absolute top-0 end-0 m-2">
+                        <Button variant="danger rounded-circle shadow" title="Favorito" aria-label="Favorito" size="sm"> <FontAwesomeIcon icon={faHeart} size="sm" /></Button>
+                    </span>
                     <Card.Img variant="top" src={modulo.imagen} alt="imagen aleatoria sobre el módulo de la clase"/>
                     <Card.Header className="border-0 pb-0 ms-auto bg-transparent">
                         <Stack><small><Badge className="mt-0 border border-success text-success shadow" bg="light" pill>{producto}{idx + 1}</Badge></small></Stack>

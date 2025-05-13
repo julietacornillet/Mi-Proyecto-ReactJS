@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Row, Col, Card, Image } from 'react-bootstrap';
+import { Row, Col, Card, Image, Container } from 'react-bootstrap';
 
 
 function Valoracion() {
@@ -14,8 +14,9 @@ function Valoracion() {
 
 
     return (
-    <div className='row bg-gradient bg-light p-3 px-md-5 pb-5 mt-auto container-fluid d-flex justify-content-center'>
-        <div className='col-md-8 pt-1'>
+        
+    <div className='bg-gradient bg-light p-3 pb-5 mt-auto container-fluid d-flex justify-content-center'>
+        <Container>
             <h2 className='h5 text-black-50 mb-3'>Comentarios</h2>
             <Row>
             {comments.map((comment, index) => {
@@ -46,7 +47,7 @@ function Valoracion() {
                 );
             })}
             </Row>
-        </div>
+        </Container>
     </div>
     );
 }
