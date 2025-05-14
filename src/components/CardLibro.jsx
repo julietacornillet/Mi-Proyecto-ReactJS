@@ -36,12 +36,12 @@ function CardLibro ({tipoLibro, contador, setContador}) {
                                         <Col md={8} className='text-secondary'>
                                             <p className='h5'>{book.volumeInfo.title}</p>
                                             
-                                            <div className="ms-end mb-1">
+                                            <div className="ms-end my-3">
                                                 <small>       
-                                                    <Badge className="fw-medium mt-0 mb- 1 border border-secondary text-secondary bg-light me-1" pill>{book.volumeInfo.language == 'es' ? 'Español' : 'Inglés'}</Badge> 
-                                                    <Badge className="fw-medium mt-0 mb-1 border border-success text-success bg-light me-1" pill>{book.volumeInfo.categories}</Badge>                                     
-                                                    {book.saleInfo.isEbook ? (<Badge className="fw-medium mt-0 mb-1 border border-primary text-primary bg-light me-1" pill>{tipoLibro}</Badge>) : '' }
-                                                    <Badge className="fw-medium mt-0 mb-1 me-1" bg='danger' pill>
+                                                    <Badge className="mt-0 mb- 1 border border-secondary text-secondary bg-light me-1" pill>{book.volumeInfo.language == 'es' ? 'Español' : 'Inglés'}</Badge> 
+                                                    <Badge className="mt-0 mb-1 border border-success text-success bg-light me-1" pill>{book.volumeInfo.categories}</Badge>                                     
+                                                    {book.saleInfo.isEbook ? (<Badge className="mt-0 mb-1 border border-primary text-primary bg-light me-1" pill>{tipoLibro}</Badge>) : '' }
+                                                    <Badge className="mt-0 mb-1 me-1" bg='danger' pill>
                                                         {book.saleInfo.saleability == 'NOT_FOR_SALE' ? 'Agotado' : ''}
                                                     </Badge>
                                                 </small>
