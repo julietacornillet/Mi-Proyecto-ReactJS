@@ -5,11 +5,12 @@ import Badge from 'react-bootstrap/Badge';
 import { Stack } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faHeart, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faLink } from '@fortawesome/free-solid-svg-icons';
+import ButtonAgregar from "./ButtonAgregar";
 
 
 
-function CardProduct ({producto, infoLink, contador, setContador, modulosList}) {
+function CardModulo ({producto, infoLink, contador, setContador, modulosList}) {
     return (
         <>
         {modulosList.map((modulo, idx) => (
@@ -32,7 +33,7 @@ function CardProduct ({producto, infoLink, contador, setContador, modulosList}) 
                             <CardLink href={modulo.btnAdicional} title={`${modulo.titulo} - ${producto}` + (idx + 1)} aria-label={'Ver material del módulo' + modulo.titulo} className="btn btn-sm btn-outline-primary" target="blank"> {infoLink} <FontAwesomeIcon className="ms-1" icon={faLink} size="sm" /></CardLink> : <Button variant="outline-primary" size="sm" disabled>Próximamente</Button>}
 
                             {modulo.btnTexto ? 
-                            <Button onClick={()=>setContador(contador+1)} variant="success rounded-circle" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button> : ''}
+                            <ButtonAgregar contador={contador} setContador={setContador} title={'Agregar al carrito'} alt={'Agregar'}/> : ''}
                         </ButtonToolbar>                                
                     </CardFooter>
                 </Card>
@@ -42,4 +43,4 @@ function CardProduct ({producto, infoLink, contador, setContador, modulosList}) 
     );
 }
 
-export default CardProduct;
+export default CardModulo;

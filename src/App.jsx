@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Modulos from './pages/Modulos';
 import Contacto from './pages/Contacto';
 import Login from './components/Login';
-import Books from './components/Books';
+import Books from './pages/Books';
 import ComingSoon from './components/ComingSoon';
 
 

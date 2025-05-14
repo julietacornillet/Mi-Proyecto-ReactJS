@@ -1,6 +1,6 @@
 import {Container, Row, Col} from "react-bootstrap";
 
-import CardProduct from "../components/CardProduct";
+import CardModulo from "../components/CardModulo";
 
 
 
@@ -12,8 +12,8 @@ function Modulos({producto, infoLink, contador, setContador, modulosList}) {
                 <Col md='12' className="pb-4">
                     <h2 className="text-primary-emphasis">Módulos del curso</h2>
                 </Col>
-                {/* car del producto */}
-                <CardProduct producto={producto} infoLink={infoLink} contador={contador} setContador={setContador} modulosList={modulosList}/>
+                {/* card del producto */}
+                <CardModulo producto={producto} infoLink={infoLink} contador={contador} setContador={setContador} modulosList={modulosList}/>
             </Row>
         </Container>
     );
