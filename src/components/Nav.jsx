@@ -6,6 +6,9 @@ import ButtonCarrito from './ButtonCarrito';
 
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+
 
 
 
@@ -22,7 +25,7 @@ function Nav({contador, setContador}) {
     <Navbar collapseOnSelect expand="lg" bg="light" data-bs-theme="light" className="shadow sticky-top">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Brand as={Link} to="/" className='fw-bolder text-primary'>ReactShop Juli</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" className='fw-bolder text-black d-flex align-items-center'>ReactShop<FontAwesomeIcon icon={faReact} className="text-info mx-1" size='2x'/>Juli</Navbar.Brand>
 
         {/* botón carrito small */}
         <div className='d-lg-none d-md-none'>

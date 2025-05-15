@@ -6,7 +6,7 @@ import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
 
 function ComingSoon () {
     return(
-        <Container className="m-auto text-center">
+        <Container className="m-auto text-center py-5">
             <Row className="d-flex justify-content-center">
                 <Col md={2}>
                     <FontAwesomeIcon icon={faPersonDigging} size="10x" className="text-warning" />

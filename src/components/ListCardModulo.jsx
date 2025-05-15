@@ -9,7 +9,6 @@ import { faHeart, faLink } from '@fortawesome/free-solid-svg-icons';
 import ButtonAgregar from "./ButtonAgregar";
 
 
-
 function CardModulo ({producto, infoLink, contador, setContador, modulosList}) {
     return (
         <>
@@ -19,7 +18,7 @@ function CardModulo ({producto, infoLink, contador, setContador, modulosList}) {
                     {/* <span className="position-absolute top-0 end-0 m-2">
                         <Button variant="danger rounded-circle shadow" title="Favorito" aria-label="Favorito" size="sm"> <FontAwesomeIcon icon={faHeart} size="sm" /></Button>
                     </span> */}
-                    <Card.Img variant="top" src={modulo.imagen} alt="imagen aleatoria sobre el módulo de la clase"/>
+                    <Card.Img variant="top" src={modulo.imagen} title={modulo.titulo} className="border-bottom"/>
                     <Card.Header className="border-0 pb-0 ms-auto bg-transparent">
                         <Stack><small><Badge className="mt-0 border border-success text-success shadow" bg="light" pill>{producto}{idx + 1}</Badge></small></Stack>
                     </Card.Header>

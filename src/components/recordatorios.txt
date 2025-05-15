@@ -29,14 +29,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /* fontawesome ==> https://docs.fontawesome.com/v5/web/use-with/react */ 
 
-1.-  npm install @fortawesome/react-fontawesome@latest
+/* npm install @fortawesome/react-fontawesome@latest
 
     //npm install @fortawesome/react-fontawesome
 
+Getting Start
+// todas las versiones
     npm install @fortawesome/fontawesome-svg-core
     npm install @fortawesome/free-solid-svg-icons
     npm install @fortawesome/free-regular-svg-icons
-    npm install @fortawesome/free-brands-svg-icons
+    npm install @fortawesome/free-brands-svg-icons */
+
+1.- npm install --save@fontawesome/fontawesome-free
 
 2.- en el archivp que vaya a usar los iconos hay que agregar
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,10 +60,15 @@ __________________________________________________________________________
 /* agregar 'addToCart' en módulos.jsx */
 
 {/* <ButtonGroup aria-label="Agregar al carrito">
-    <Button onClick={()=>addToCart(modulo.titulo)} variant="outline-primary" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
+    <Button onClick={()=>addToCart(modulo.id)} variant="outline-primary" title={modulo.btnTexto} aria-label="Agregar al carrito" size="sm"> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
     <Button onClick={()=>setContador(contador+1)} size="sm" variant="outline-success shadow" title="Sumar" aria-label="Sumar al carrito"><span className="h5 px-1 fw-bolder">+</span></Button>
     <Button onClick={()=>setContador(contador-1)} size="sm" variant="outline-danger shadow" title="Quitar" aria-label="Quitar al carrito"><span className="h5 px-1 fw-bolder">-</span></Button>
 </ButtonGroup> */}
+
+__________________________________________________________________________
+
+API google BOOKS documentación
+https://developers.google.com/books/docs/v1/reference/volumes/list?hl=es-419
 
 __________________________________________________________________________
 

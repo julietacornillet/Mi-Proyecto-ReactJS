@@ -4,15 +4,17 @@ import {CardFooter, Col, Row} from "react-bootstrap";
 import {Card, Badge} from 'react-bootstrap';
 
 import ButtonAgregar from "./ButtonAgregar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTags } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function CardLibro ({tipoLibro, contador, setContador}) {
+function ListCardBook ({tipoLibro, contador, setContador, filters}) {
     
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-    fetch('https://www.googleapis.com/books/v1/volumes?q="react+Javascript"&maxResults=15')
+    fetch(`https://www.googleapis.com/books/v1/volumes?q="${filters}"&maxResults=15`)
         .then(res => res.json())
         .then(data => setBooks(data.items))
         .catch(err => console.error("Error de carga de libros", err));
@@ -22,8 +24,8 @@ function CardLibro ({tipoLibro, contador, setContador}) {
         <>
         {books.map((book) => {
                     return (
-                    <Col key={book.id} md={6} className="g-3">
-                        <Card className='h-100 position-relative'>
+                    <Col key={book.id} md={6} className="g-4">
+                        <Card className='h-100 position-relative shadow-sm'>
                             <span className="position-absolute top-0 end-0 m-2">
                                 <ButtonAgregar contador={contador} setContador={setContador} title={'Agreagar libro al carrito'} alt={'Agreagar al carrito'} disabled={book.saleInfo.saleability === 'NOT_FOR_SALE'}  variant={book.saleInfo.saleability === 'NOT_FOR_SALE' ? 'outline-success rounded-circle' : 'success rounded-circle'}/>                             
                             </span>
@@ -56,7 +58,7 @@ function CardLibro ({tipoLibro, contador, setContador}) {
                             {book.saleInfo?.listPrice
                                 ? 
                                 <CardFooter className='ms-auto bg-success bg-opacity-10 fw-medium rounded-start-0 border-success small text-success-emphasis mt-0'>
-                                    Precio: {book.saleInfo.listPrice.currencyCode} {book.saleInfo.listPrice.amount}
+                                    <FontAwesomeIcon icon={faTags} className="text-success me-2"/> {book.saleInfo.listPrice.currencyCode} {book.saleInfo.listPrice.amount}
                                 </CardFooter>    
                                 : ''
                             }
@@ -68,4 +70,4 @@ function CardLibro ({tipoLibro, contador, setContador}) {
     );
 }
 
-export default CardLibro;
+export default ListCardBook;

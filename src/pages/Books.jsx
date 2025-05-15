@@ -1,6 +1,6 @@
 
 import { Row, Col, Container, } from 'react-bootstrap';
-import CardLibro from '../components/CardLibro';
+import ListCardBook from '../components/ListCardBook';
 
 
 function Books({contador, setContador}) {
@@ -14,7 +14,7 @@ function Books({contador, setContador}) {
                     <h2 className="text-primary-emphasis">Libros React JS</h2>
                 </Col>
 
-                <CardLibro tipoLibro={'eBook'} contador={contador} setContador={setContador}/>
+                <ListCardBook tipoLibro={'eBook'} contador={contador} setContador={setContador} filters={"react+javascript"}/>
             </Row>
         </Container>
     );
