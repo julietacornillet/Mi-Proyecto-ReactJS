@@ -6,9 +6,15 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Modulos from './pages/Modulos';
 import Contacto from './pages/Contacto';
-import Login from './components/Login';
+import Login from './pages/Login';
 import Books from './pages/Books';
+
+import RutaProtegida from './components/RutaProtegida';
+import Admin from './pages/Admin';
+import Usuario from './pages/Usuario';
+
 import ComingSoon from './components/ComingSoon';
+
 
 
 // listado para modulos
@@ -35,9 +41,13 @@ function App() {
             <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList} producto={'Módulo 0'} infoLink={'Material teórico'}/>}/>
             <Route path='/libros' element={<Books contador={contador} setContador={setContador} />}/>
             <Route path='/contacto' element={<Contacto/>}/>
-            
-            <Route path='/comingSoon' element={<ComingSoon/>}/>
+            {/* páginas para administrar */}
+              <Route path="/usuario/:id" element={ <RutaProtegida> <Usuario /> </RutaProtegida> } />
+              <Route path="/admin/:id" element={ <RutaProtegida> <Admin /> </RutaProtegida> } />
+            {/* página en construcción */}
+              <Route path='/comingSoon' element={<ComingSoon/>}/>
           </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>

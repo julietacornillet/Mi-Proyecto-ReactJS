@@ -10,8 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 
-
-
 function Nav({contador, setContador}) {
   // console.log(modulosList);
   

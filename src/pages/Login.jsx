@@ -1,8 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Container, Card, Form, Button, Col, Row, CardBody } from "react-bootstrap";
 import Swal from 'sweetalert2';
 
-import { useNavigate } from 'react-router-dom';
 
 function Login () {
 
@@ -45,7 +45,10 @@ function Login () {
         }
 
         // si paso las validaciones ingreso
-        navigate('/comingsoon');
+        // const handleLogin = () => {
+            localStorage.setItem('auth', 'true');
+            navigate('/comingsoon');
+        //   };
 
         // con el useState limpio formulario
         setEmail('');
@@ -53,7 +56,7 @@ function Login () {
         
     };
 
-
+    
     return(
         <Container className="m-auto">
             <Row className="d-flex justify-content-center m-4">
@@ -72,7 +75,7 @@ function Login () {
                                 <Form.Control type="password" placeholder="Tu Password" value={pass} onChange={(e) => setPass(e.target.value)} />
                             </Form.Group>
 
-                            <Button className="mt-3" variant="primary" type="submit">
+                            <Button className="mt-3" variant="primary" type='submit'>
                                 Ingresar
                             </Button>
                         </Form>
