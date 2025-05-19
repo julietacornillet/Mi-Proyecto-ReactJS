@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import {Nav as MenuNav, Navbar, NavDropdown} from 'react-bootstrap';
-import ButtonCarrito from './ButtonCarrito';
+import Carrito from './Carrito';
 
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ function Nav({contador, setContador}) {
 
         {/* botón carrito small */}
         <div className='d-lg-none d-md-none'>
-          <ButtonCarrito contador={contador} setContador={setContador} mostrarOffCanvas={mostrarOffCanvas} mostrarModal={mostrarModal} modalShow={modalShow} offcanvasShow={offcanvasShow} />
+          <Carrito contador={contador} setContador={setContador} mostrarOffCanvas={mostrarOffCanvas} mostrarModal={mostrarModal} modalShow={modalShow} offcanvasShow={offcanvasShow} />
         </div>{/* fin botón carrito small */}
 
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -54,7 +54,7 @@ function Nav({contador, setContador}) {
             {/* carrito botón medium */}
             <MenuNav.Item>
               <div className='d-none d-md-block d-lg-block'>
-                <ButtonCarrito contador={contador} setContador={setContador} mostrarOffCanvas={mostrarOffCanvas} mostrarModal={mostrarModal} modalShow={modalShow} offcanvasShow={offcanvasShow}/>
+                <Carrito contador={contador} setContador={setContador} mostrarOffCanvas={mostrarOffCanvas} mostrarModal={mostrarModal} modalShow={modalShow} offcanvasShow={offcanvasShow}/>
               </div>
             </MenuNav.Item> {/* fin carrito medium */}
             

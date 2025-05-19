@@ -9,7 +9,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function ButtonCarrito ({contador, setContador}) {
+function Carrito ({contador, setContador}) {
 
     // offCanvas navbar
     const [offcanvasShow, mostrarOffCanvas] = useState(false);
@@ -22,7 +22,7 @@ function ButtonCarrito ({contador, setContador}) {
             {/* carrito botón */}
             <Button variant="light shadow rounded-pill border-success" className='ms-md-2 ms-0 my-md-0 my-3' onClick={() => mostrarOffCanvas(true)}>
                 <FontAwesomeIcon icon={faCartShopping} className='mt-1 me-1 text-success'/> <Badge pill bg="success" className='fw-medium pb-1 bg-gradient' title={`Hay ${contador} productos seleccionados`}> {contador} </Badge>
-                    <span className="visually-hidden">Carrito Módulos</span>
+                    <span className="visually-hidden">Carrito</span>
             </Button>
 
             {/* carrito detalle */}
@@ -33,8 +33,7 @@ function ButtonCarrito ({contador, setContador}) {
                     </Offcanvas.Title>
                 </Offcanvas.Header>
 
-                <Offcanvas.Body>     
-
+                <Offcanvas.Body>   
                     <ListGroup as="ul">
                         <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center border-0 px-0" >
                             <div className="ms-0 me-2"> Módulo 1 </div>
@@ -104,4 +103,4 @@ function ButtonCarrito ({contador, setContador}) {
     );
 }
 
-export default ButtonCarrito;
+export default Carrito;
