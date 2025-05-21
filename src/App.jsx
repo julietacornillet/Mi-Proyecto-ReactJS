@@ -16,7 +16,6 @@ import Usuario from './pages/Usuario';
 import ComingSoon from './components/ComingSoon';
 
 
-
 // listado para modulos
 import { modulosList } from './utils/modulosList';
 // css
@@ -38,8 +37,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList} producto={'Módulo 0'} infoLink={'Material teórico'}/>}/>
-            <Route path='/libros' element={<Books contador={contador} setContador={setContador} />}/>
+            <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList}/>}/>
+            <Route path='/libros' element={<Books setContador={setContador} contador={contador} />}/>
             <Route path='/contacto' element={<Contacto/>}/>
             {/* páginas para administrar */}
               <Route path="/usuario/:id" element={ <RutaProtegida> <Usuario /> </RutaProtegida> } />

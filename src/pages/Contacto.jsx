@@ -55,7 +55,7 @@ function Contacto() {
             Swal.fire({
                 icon: 'error',
                 title: 'Teléfono no válido',
-                text: 'Por favor, ingresá un número de teléfono válido (solo dígitos, con o sin +)',
+                html: 'Por favor, ingresá un número de teléfono válido <br>(solo dígitos, con o sin +, entre 7 y 15 dígitos)',
             });
             return;
         }
@@ -84,19 +84,19 @@ function Contacto() {
             <Form.Group as={Row} controlId="formGridState">
                 <Col sm={4}>
                     <Form.Group className="mb-3">
-                        <Form.Label>Nombre</Form.Label>
+                        <Form.Label>Nombre <small className='text-danger'>*</small></Form.Label>
                         <Form.Control type="text" placeholder="Tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                     </Form.Group>
                 </Col>
                 <Col sm={4}>
                     <Form.Group className="mb-3">
-                        <Form.Label>Email</Form.Label>
+                        <Form.Label>Email <small className='text-danger'>*</small></Form.Label>
                         <Form.Control type="email" placeholder="tu@email.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </Form.Group>
                 </Col>
                 <Col sm={4}>
                     <Form.Group className="mb-3">
-                        <Form.Label>Teléfono</Form.Label>
+                        <Form.Label>Teléfono <small className='text-danger'>*</small></Form.Label>
                         <Form.Control type="number" placeholder="+54911" value={tel} onChange={(e) => setTel(e.target.value)} />
                     </Form.Group>
                 </Col>
@@ -104,17 +104,26 @@ function Contacto() {
             <Form.Group className="mb-3">                
                 <Col sm={8}>
                     <Form.Group className="mb-3">
-                        <Form.Label>Asunto de consulta</Form.Label>
+                        <Form.Label>Asunto de consulta <small className='text-danger'>*</small></Form.Label>
                         <Form.Control type="text" placeholder="Tu consulta" value={asunto} onChange={(e) => setAsunto(e.target.value)} />
                     </Form.Group>
                 </Col>
-                <Form.Label>Mensaje</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder='Detalle de tu consulta' value={mensaje} onChange={(e) => setMensaje(e.target.value)} />
+                <Form.Label>Mensaje <small className='text-danger'>*</small></Form.Label>
+                <Form.Control as="textarea" rows={3} placeholder='Detalle de tu consulta' maxLength={150} value={mensaje} onChange={(e) => setMensaje(e.target.value)} aria-describedby="mensajeHelpBlock"/>
+                <Form.Text id="passwordHelpBlock" muted>
+                    Máximo 150 caracteres
+                </Form.Text>
             </Form.Group>
 
             <Form.Check type="switch" id="custom-switch" label="Quiero recibir novedades" />
 
-            <Button variant="primary" type="submit" className='mt-5'>Enviar consulta</Button>
+            <div className="row my-3">
+                <div className="col-md-12">
+                <small className='text-danger'>* Todos los campos son obligatorios</small>
+                </div>
+            </div>
+            
+            <Button variant="primary" type="submit">Enviar consulta</Button>
         </Form>
         </Container>
     );

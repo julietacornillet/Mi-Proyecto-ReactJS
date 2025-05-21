@@ -4,7 +4,7 @@ import ListCardModulo from "../components/ListCardModulo";
 
 
 
-function Modulos({producto, infoLink, contador, setContador, modulosList}) {
+function Modulos({modulosList, contador, setContador}) {
     
     return(
         <Container className="py-5">
@@ -12,8 +12,10 @@ function Modulos({producto, infoLink, contador, setContador, modulosList}) {
                 <Col md='12' className="pb-4">
                     <h2 className="text-primary-emphasis">Módulos del curso</h2>
                 </Col>
-                {/* card del producto */}
-                <ListCardModulo producto={producto} infoLink={infoLink} contador={contador} setContador={setContador} modulosList={modulosList}/>
+                
+                {modulosList.map((modulo, id) => (
+                    <ListCardModulo key={id} contador={contador} setContador={setContador} modulo={modulo} />
+                ))}
             </Row>
         </Container>
     );

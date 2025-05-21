@@ -52,6 +52,11 @@ __________________________________________________________________________
 
 API google BOOKS documentación
 https://developers.google.com/books/docs/v1/reference/volumes/list?hl=es-419
+https://developers.google.com/books/docs/v1/reference/volumes?hl=es-419
+https://developers.google.com/books/docs/v1/reference/volumes/get?hl=es-419
+
+ejemplo
+https://www.googleapis.com/books/v1/volumes?q=react
 
 
 

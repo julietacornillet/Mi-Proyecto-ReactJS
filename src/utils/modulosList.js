@@ -62,7 +62,15 @@ export const modulosList= [
         id:8,
         titulo:'Introducción a Context API',
         texto:'Creación de Context API para el manejo de estado global / Uso de useContext para compartir datos entre componentes / Implementación del estado global para el carrito de compras',
-        imagen:"/modulo_08.jpg",
+        imagen:'/modulo_08.jpg',
+        btnTexto: 'Lo quiero!',
+        btnAdicional:'https://gamma.app/docs/React-JS-Clase-8-mlamfv9gzwekhp3?mode=doc'
+    },    
+    {
+        id:9,
+        titulo:'Autenticación de usuarios',
+        texto:'Introducción a la Autenticación de Usuarios / Implementación de formulario de login / Manejo de autenticación con tokens (simulada) / Protección de rutas usando Context API para la autenticación',
+        imagen:'',
         btnTexto: '',
         btnAdicional:''
     }

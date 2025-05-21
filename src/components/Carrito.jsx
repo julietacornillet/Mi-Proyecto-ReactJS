@@ -82,7 +82,7 @@ function Carrito ({contador, setContador}) {
                         </Modal.Header>
                         <Modal.Body className='px-5 pt-0'>
                         <h2 className='text-primary'>
-                            ¡Suerte en tu curso de React JS !
+                            ¡Gracias!
                             </h2>
                         Te enviamos a tu casilla de correo toda la información necesaria para poder descargate los módulos seleccionados.
                         </Modal.Body>

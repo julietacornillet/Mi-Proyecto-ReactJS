@@ -44,7 +44,8 @@ function Nav({contador, setContador}) {
               <NavDropdown.Item href="https://gamma.app/docs/React-JS-Clase-2-96cn3lmtklm5ejz?mode=doc" target='_blank'>Guía de Props</NavDropdown.Item>
               <NavDropdown.Item href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Using_promises" target='_blank'>Guía introductoria a las promesas de JavaScript</NavDropdown.Item>
               <NavDropdown.Item href="https://www.freecodecamp.org/espanol/news/tutorial-de-react-router-version-6-como-navegar-a-otros-componentes-y-configurar-un-enrutador/" target='_blank'>React Router - Guía para principiantes</NavDropdown.Item>
-              <NavDropdown.Item href="https://mockapi.io/" target='_blank'>MockAPI: Plataforma de simulación de datos</NavDropdown.Item>                    
+              <NavDropdown.Item href="https://mockapi.io/" target='_blank'>MockAPI: Plataforma de simulación de datos</NavDropdown.Item> 
+              <NavDropdown.Item href="https://www.freecodecamp.org/news/context-api-in-react/" target='_blank'>Context API</NavDropdown.Item> 
                 <NavDropdown.Divider />
               <NavDropdown.Item href="https://github.com/nmfernandez1982/Talento-React-2025-1/tree/main" target='_blank'>Repositorio GIT</NavDropdown.Item>
             </NavDropdown>
