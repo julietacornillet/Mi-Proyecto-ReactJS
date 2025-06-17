@@ -1,15 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 import {Container, Row, Col} from 'react-bootstrap';
 import ListCardBook from '../components/ListCardBook';
 
+import { CartContext } from '../components/CartContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function Books ({setContador, contador}) {
+// function Books ({setContador, contador}) {
     
     // const [books, setBooks] = useState([]);
 
@@ -20,8 +21,11 @@ function Books ({setContador, contador}) {
     //     .catch(err => console.error("Error de carga de libros", err));
     // }, []);
 
+
+function Books () {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { agregarAlCarrito } = useContext(CartContext);
 
     const filters = 'react+javascript';
     
@@ -52,7 +56,9 @@ function Books ({setContador, contador}) {
                 </Col>
                     {books.map((book) => {
                         return (
-                            <ListCardBook key={book.id} book={book} contador={contador} setContador={setContador}/>
+                            <Col md={6} className="g-4" key={book.id}>
+                                <ListCardBook book={book} agregarAlCarrito={agregarAlCarrito}/>
+                            </Col>
                         );
                     })}       
             </Row>

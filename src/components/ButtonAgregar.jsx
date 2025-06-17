@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
-function ButtonAgregar({title, variant, disabled, alt, contador, setContador}) {
+function ButtonAgregar({title, variant, disabled, alt, onClick}) {
   return (
-    <Button onClick={()=>setContador(contador+1)} variant={variant} title={title} aria-label={alt} size="sm" disabled={disabled}> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
+    <Button onClick={onClick} variant={variant} title={title} aria-label={alt} size="sm" disabled={disabled}> <FontAwesomeIcon icon={faCartShopping} size="sm" /></Button>
   );
 }
 

@@ -9,12 +9,14 @@ import Contacto from './pages/Contacto';
 import Login from './pages/Login';
 import Books from './pages/Books';
 
+// import Carrito from './components/Carrito';
+import { CartProvider } from './components/CartContext';
+
 import RutaProtegida from './components/RutaProtegida';
 import Admin from './pages/Admin';
 import Usuario from './pages/Usuario';
 
 import ComingSoon from './components/ComingSoon';
-
 
 // listado para modulos
 import { modulosList } from './utils/modulosList';
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
+      <CartProvider>
       <BrowserRouter>
         <Header/>
         <Nav setContador={setContador} contador={contador}/>
@@ -38,7 +41,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList}/>}/>
-            <Route path='/libros' element={<Books setContador={setContador} contador={contador} />}/>
+            <Route path='/libros' element={<Books />}/>
             <Route path='/contacto' element={<Contacto/>}/>
             {/* páginas para administrar */}
               <Route path="/usuario/:id" element={ <RutaProtegida> <Usuario /> </RutaProtegida> } />
@@ -49,6 +52,7 @@ function App() {
 
         <Footer />
       </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }

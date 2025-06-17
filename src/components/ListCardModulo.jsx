@@ -6,7 +6,7 @@ import { Stack } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faLink } from '@fortawesome/free-solid-svg-icons';
-import ButtonAgregar from "./ButtonAgregar";
+// import ButtonAgregar from "./ButtonAgregar";
 
 
 function CardModulo ({ modulo, contador, setContador}) {
@@ -29,7 +29,7 @@ function CardModulo ({ modulo, contador, setContador}) {
                         {modulo.btnAdicional ? 
                         <CardLink href={modulo.btnAdicional} title={`${modulo.titulo} Módulo 0` + (modulo.id)} aria-label={'Ver material del módulo' + modulo.titulo} className="btn btn-sm btn-outline-primary" target="blank"> Material teórico <FontAwesomeIcon className="ms-1" icon={faLink} size="sm" /></CardLink> : <Button variant="outline-primary" size="sm" disabled>Próximamente</Button>}
 
-                        {modulo.btnTexto ?  <ButtonAgregar variant={'primary rounded-circle'} contador={contador} setContador={setContador} title={'Agregar al carrito'} alt={'Agregar'}/> : ''}
+                        {/* {modulo.btnTexto ?  <ButtonAgregar variant={'primary rounded-circle'} contador={contador} setContador={setContador} title={'Agregar al carrito'} alt={'Agregar'}/> : ''} */}
                     </ButtonToolbar>                                
                 </CardFooter>
             </Card>

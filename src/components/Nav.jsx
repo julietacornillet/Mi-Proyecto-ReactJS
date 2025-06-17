@@ -1,8 +1,10 @@
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import {Nav as MenuNav, Navbar, NavDropdown} from 'react-bootstrap';
 import Carrito from './Carrito';
+
+import { CartContext } from './CartContext';
 
 import { Link } from 'react-router-dom';
 
@@ -18,6 +20,9 @@ function Nav({contador, setContador}) {
 
   // modal finalizar carrito
   const [modalShow, mostrarModal] = useState(false); 
+
+  
+  const { carrito } = useContext(CartContext);
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" data-bs-theme="light" className="shadow sticky-top">

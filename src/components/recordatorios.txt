@@ -70,6 +70,10 @@ __________________________________________________________________________
   // const handleAddToCarrito =(modulosList)=>{
   //   setCarrito([...carrito,modulosList])
   // };
+
+  proyecto profe nicolas
+  https://www.youtube.com/watch?v=Zwyij9IJhiE
+  en el git https://github.com/nmfernandez1982/ProyectoFinalReact25017.git rama etapa2
   
 
 /* agregar 'addToCart' en módulos.jsx */
