@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, Card, Form, Button, Col, Row, CardBody } from "react-bootstrap";
 import Swal from 'sweetalert2';
 
@@ -47,7 +47,7 @@ function Login () {
         // si paso las validaciones ingreso
         // const handleLogin = () => {
             localStorage.setItem('auth', 'true');
-            navigate('/comingsoon');
+            navigate('/admin/usuario123');
         //   };
 
         // con el useState limpio formulario

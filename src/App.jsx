@@ -19,7 +19,7 @@ import Usuario from './pages/Usuario';
 import ComingSoon from './components/ComingSoon';
 
 // listado para modulos
-import { modulosList } from './utils/modulosList';
+// import { modulosList } from './utils/modulosList';
 // css
 import 'bootstrap/dist/css/bootstrap.min.css';
 // rutas
@@ -40,7 +40,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path='/modulos' element={<Modulos setContador={setContador} contador={contador} modulosList={modulosList}/>}/>
+            <Route path='/modulos' element={<Modulos/>}/>
             <Route path='/libros' element={<Books />}/>
             <Route path='/contacto' element={<Contacto/>}/>
             {/* páginas para administrar */}
