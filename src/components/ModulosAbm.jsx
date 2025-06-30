@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Table, Button, Modal, Form, InputGroup } from "react-bootstrap";
+import { Container, Row, Col, Table, Button, Modal, Form, InputGroup, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan, faSpinner, faEdit, faLink, faPhotoFilm, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
@@ -189,11 +189,14 @@ const ModulosABM = () => {
         <Row className='m-auto text-primary text-opacity-50'><FontAwesomeIcon icon={faSpinner} spin size='4x'/></Row>
       ) : (
         <div>
-          <Button size="sm" variant="outline-primary" onClick={openNuevoModal} className="my-3 float-end shadow">
-            Nuevo módulo <FontAwesomeIcon icon={faPlusCircle} className="ms-1"/>
-          </Button>
+          <Row>
+            <Col className="ms-auto text-end">
+              <Button size="sm" variant="primary" onClick={openNuevoModal} className="my-3 shadow">
+                Nuevo módulo <FontAwesomeIcon icon={faPlusCircle} className="ms-1"/>
+              </Button>
+            </Col>
           
-          <Table striped bordered hover>
+          <Table striped bordered hover responsive>
             <thead className="bg-gradient table-primary">
               <tr>
                 <th>N°</th>
@@ -220,17 +223,30 @@ const ModulosABM = () => {
                   <td>{item.imagen}</td>
                   <td>{item.btnAdicional}</td>
                   <td>
-                    <Button variant="link" size="sm" onClick={() => openEditarModal(item)} className="mx-2 p-0" >
-                      <FontAwesomeIcon icon={faEdit}/>
-                    </Button>
-                    <Button variant="link text-danger" size="sm" onClick={() => handleDelete(item.id)} className="mx-2 p-0">
-                      <FontAwesomeIcon icon={faTrashCan}/>
-                    </Button>
+                    {/* editar */}
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={<Tooltip id={`tooltip-editar-${item.id}`}>Editar</Tooltip>}
+                    >
+                      <Button variant="link" size="sm" onClick={() => openEditarModal(item)} className="mx-2 p-0">
+                        <FontAwesomeIcon icon={faEdit} />
+                      </Button>
+                    </OverlayTrigger>
+                    {/* eliminar */}
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={<Tooltip id={`tooltip-eliminar-${item.id}`}>Eliminar</Tooltip>}
+                    >
+                      <Button variant="link text-danger" size="sm" onClick={() => handleDelete(item.id)} className="mx-2 p-0">
+                        <FontAwesomeIcon icon={faTrashCan}/>
+                      </Button>
+                    </OverlayTrigger>
                   </td>
                 </tr>
               ))}
             </tbody>
           </Table>
+          </Row>
         </div>
       )}
 

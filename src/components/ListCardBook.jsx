@@ -21,8 +21,8 @@ function ListCardBook ({book, agregarAlCarrito}) {
 
                 <Card.Body className='pb-0'>
                     <Row>
-                        <Col md={3}>
-                            <Card.Img src={book.volumeInfo.imageLinks.thumbnail} className='shadow pe-0' />
+                        <Col md={3} xs={5} className="mb-3 mb-md-0">
+                            <Card.Img variant="top" src={book.volumeInfo.imageLinks.thumbnail} className='shadow pe-0' />
                         </Col>
                         <Col md={8} className='text-secondary'>
                             <p className='h5'>{book.volumeInfo.title}</p>
