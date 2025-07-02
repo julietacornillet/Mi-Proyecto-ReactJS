@@ -1,20 +1,37 @@
-
 import { useParams } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-import ComingSoon from "../components/ComingSoon";
+import { Container, Row, Badge, Alert } from "react-bootstrap";
+import ModulosAbm from "../components/ModulosAbm";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
-function Admin () {
+function Admin() {
     const { id } = useParams();
+    //   const navigate = useNavigate();
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
 
-    return(
+    //   useEffect(() => {
+    //     if (!usuario || usuario.rol !== 'admin') {
+    //       navigate('/login');
+    //     }
+    //   }, [usuario, navigate]);
+
+    return (
         <Container className='py-5'>
-            <Row>
-                <Col md={12}>
-                    <h2 className="fw-bolder h1 text-primary-emphasis h3">Perfil Administrador: {id}</h2>
-                </Col>
-            </Row>
-            <ComingSoon/>
-        </Container> 
+        <Row>
+        {usuario.rol === 'administrador' && (
+                <>
+                <Badge bg="light" className="border border-2 rounded-3 col-md-auto shadow-sm ms-2 text-black-50 mb-3">
+                    <FontAwesomeIcon icon={faUserAlt} /> <span className="ms-1">Rol {usuario.rol}</span>
+                </Badge>
+                <ModulosAbm />
+                </>
+            )}
+
+            {usuario.rol !== 'administrador' && (
+                <Alert variant="danger">No tiene permisos para ver esta sección.</Alert>
+            )} 
+        </Row>
+        </Container>
     );
 }
 

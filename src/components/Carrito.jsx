@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import {Alert, Button, Badge, Modal, Offcanvas, ListGroup, Table} from 'react-bootstrap';
+import {Alert, Button, Badge, Modal, Offcanvas, Table} from 'react-bootstrap';
 import { CartContext } from './CartContext';
-import ButtonContador from './ButtonContador';
+// import ButtonContador from './ButtonContador';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
