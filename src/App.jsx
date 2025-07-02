@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -13,15 +16,26 @@ import Admin from './pages/Admin';
 import Usuario from './pages/Usuario';
 import ComingSoon from './components/ComingSoon';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
+
+
+
 
 function App() {
   const [contador, setContador] = useState(0);
 
   return (
     <div className="d-flex flex-column min-vh-100">
+
       <CartProvider>
         <BrowserRouter>
+     
+          <Helmet>
+            <title>Proyecto Julieta Cornillet</title>
+            <meta name="description" content="Proyecto desarrollado como parte del curso de React JS en Talento Tech" />
+          </Helmet>
+
           <Header />
           <Nav setContador={setContador} contador={contador} />
           <Routes>
